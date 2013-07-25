@@ -1,0 +1,760 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+       <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<title>Test</title>
+
+
+
+//INITIALIZING JAVA SCRIPT AND JQUERY CDN
+
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript">
+$(document).bind('mobileinit', function(){
+	$.mobile.defaultPageTransition = "slide";
+});
+</script>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+<link rel="stylesheet" href="css/photoswipe/photoswipe.css">
+<link rel="stylesheet/less" href="css/style.less">
+<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+<script src="js/code.photoswipe.jquery-3.0.5.min.js"></script>
+<script type="text/javascript" src="jquery-min.js"></script>
+<script type="text/javascript" src="jquery.FeedParser.js"></script>
+</head>
+</head>
+
+
+
+<body>
+	
+	
+    <!-- MAIN PAGE-->
+
+<div data-role="page" id="main"> 
+	<div data-role="header"> 
+		<a href="logout"> LogOut </a>
+        <h3>Solstice Portal</h3>		
+
+<div data-role="navbar">
+ <ul>
+  <li><a href="#index" data-icon="home" class="ui-btn-active">Home</a>
+  <li><a href="#need" data-icon="search">Need Something</a> 
+  <li><a href="#training" data-icon="info">Training</a> 
+  <li><a href="#projects" data-icon="grid">Projects Portal</a>
+ </ul> 
+</div>
+
+
+</div>
+		
+<!-- Main Content -->
+<div data-role="content">
+	<div id="divRss">
+	 </div>
+
+	 <div class="pt-menu">
+            <a href="#announce" data-theme="d" data-corners="true" data-role="button">
+                <img src="http://us.cdn2.123rf.com/168nwm/snake3d/snake3d1103/snake3d110300125/9180588-megaphone-kommunikation-ank-ndigung-nachrichten-modern-orange-bullhorn-lautsprecher-mit-blauen-teile.jpg" width="50" height="50" alt="rss" style="display: block; margin: 0 auto">
+                Announcements
+            </a>
+
+            <a data-theme="d" data-corners="true" data-role="button" href="#quicklinks">
+                <img src="http://southlakepediatrics.com/image/home/link.JPG" width="50" height="50" alt="rss" style="display: block; margin: 0 auto">
+                Quick links
+            </a>
+
+            <a data-theme="d" data-corners="true" data-role="button" href="http://blog.solstice-mobile.com/">
+                <img src="http://www.ottawaflowers.com/img/new_256.png" width="50" height="50" alt="mail" style="display: block; margin: 0 auto">
+                What's Latest!
+            </a>
+
+            <a data-theme="d" data-corners="true" data-role="button" href="http://careers.solstice-mobile.com/">
+                <img src="http://eslhitchhiker.com/content_photos/icon_jobs.gif" width="50" height="50" alt="mail" style="display: block; margin: 0 auto">
+                Current Open Positions
+            </a>
+
+			 <a data-theme="d" data-corners="true" data-role="button" href="#hr">
+	                <img src="http://va.timeandpay.com/carousel/icon-human-resources.png" width="50" height="50" alt="mail" style="display: block; margin: 0 auto">
+	                Human Resources
+	            </a>	 
+	
+				<a data-theme="d" data-corners="true" data-role="button" href="#recruit">
+			                <img src="http://www.blogging4jobs.com/wp-content/uploads/2012/11/rh.logo_.icon_.png" width="50" height="50" alt="mail" style="display: block; margin: 0 auto">
+			                Recruiting
+			            </a>
+			
+				 <a data-theme="d" data-corners="true" data-role="button" href="#marketing">
+					                <img src="http://www.securityselling.com/img/in-person-icon.png" width="50" height="50" alt="mail" style="display: block; margin: 0 auto">
+					                Marketing
+					            </a>
+					
+								<a data-theme="d" data-corners="true" data-role="button" href="#sales">
+									                <img src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-3/256/sales-report-icon.png" width="50" height="50" alt="mail" style="display: block; margin: 0 auto">
+									                Sales
+									            </a>
+
+     </div>
+        
+</div>
+
+
+
+
+
+
+<!-- MAIN PAGE FOOTER -->
+<div data-role="footer"data-id="main" position="fixed">
+	<div data-role="navbar">
+		<ul>
+		  <li><a href="#infor" data-icon="info" data-transition="slideup">General Info</a></li> 
+
+		<li><a href="#help" data-icon="alert" data-transition="slideup">Operations</a></li>
+		</ul>
+		
+		<div style="text-align: center;"> 
+	<p>Solstice-Mobile ©</p></div>
+	</div> 
+	
+	
+	
+</div>
+
+
+
+
+</div>
+
+<!-- ALL SUB PAGES STARTS HERE-->
+
+
+
+
+<!-- ANNOUNCEMENTS PAGE STARTS-->
+
+<div data-role="page" id="announce" data-title ="announce">
+	<div data-role="header"> 
+		<a data-role="button" data-rel="back" data-icon="arrow-l" data-corners="false">Back</a>
+		<a data-role="button" href="#main" data-icon="home" data-corners="false" data-transition="flip">Home</a>
+
+		<h1>Announcements</h1>
+	</div>
+		<div data-role="content">
+			<div class="pt-menu">
+		            <a data-theme="d" data-corners="false" data-role="button"  href="https://docs.google.com/a/solstice-consulting.com/forms/d/1ZbhvbMRXvYyEKpzm8bm-E3Tqr0L46TvsPgTPN5p-D2w/viewform">
+		                <img src="http://stephaniesinteriordesign.com/wp-content/uploads/2011/11/medal-icon.png" width="80" height="80" alt="rss" style="display: block; margin: 0 auto">
+		                Awesomeness - Nomination Form
+		            </a>
+					 <a data-theme="d" data-corners="false" data-role="button"  href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/home/j-s-internal-blog">
+			                <img src="http://www.solstice-mobile.com/images/stories/people/j.jpg" width="80" height="80" alt="rss" style="display: block; margin: 0 auto">
+			               J's Internal Blog 
+			            </a>
+			
+							 <a data-theme="d" data-corners="false" data-role="button"  href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/employee-referral-program">
+					                <img src="http://www.strokesforfolks.com/images/layout/site/referral-icon.png" width="80" height="80" alt="rss" style="display: block; margin: 0 auto">
+					               Referral Program! 
+					            </a>
+					
+					
+								<a data-theme="d" data-corners="false" data-role="button"  href="https://docs.google.com/a/solstice-consulting.com/file/d/0B3dZaVmc6rXdUXF6cHhGa2pCNGc/edit">
+						                <img src="http://salvagery.org/wp-content/uploads/2012/05/community-icon.png" width="80" height="80" alt="rss" style="display: block; margin: 0 auto">
+						               Meet Our 2013 Interns
+						            </a>
+									<a data-theme="d" data-corners="false" data-role="button"  href="https://docs.google.com/a/solstice-consulting.com/document/d/1vaWqbfVjYVcegN3FOLQdthRhn_T2FD7Y9AQcrqOCiKI/edit">
+							                <img src="http://icons.iconarchive.com/icons/dapino/money/256/Credit-Card-icon.png" width="80" height="80" alt="rss" style="display: block; margin: 0 auto">
+							               Credit Card / Expense Policy
+							            </a>
+											<a data-theme="d" data-corners="false" data-role="button"  href="https://docs.google.com/a/solstice-consulting.com/document/d/1VQGuiwHIt6yvlSvQQ0zJmu1vupj8nevhmcflAOQYkks/edit">
+									                <img src="http://rocketdock.com/images/screenshots/key-icon.png" width="80" height="80" alt="rss" style="display: block; margin: 0 auto">
+									               
+													Opening/Locking - Procedures
+									            </a>
+			
+			
+		  </div>
+
+</div>
+<div data-role="footer"><div style="text-align: center;">
+	<p>Solstice-Mobile ©</p>
+	</div></div>
+</div>
+
+<!-- ANNOUNCEMENTS PAGE ENDS-->
+
+<!-- QUICK LINKS PAGE STARTS-->
+
+<div data-role="page" id="quicklinks" data-title ="quicklinks">
+	<div data-role="header"> 
+		<a data-role="button" data-rel="back" data-icon="arrow-l" data-corners="false">Back</a>
+		<a data-role="button" href="#main" data-icon="home" data-corners="false" data-transition="flip">Home</a>
+
+		<h1>Quick Links</h1>
+	</div>
+		<div data-role="content">
+			
+				<div data-class="pt-menu"><ul data-role="listview">
+				
+				<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/marketing/branding-and-templates">
+					<img src="https://si0.twimg.com/profile_images/2624989235/vu91lbomoutm56on2ed9.png" >Templates and Logos
+					
+						
+						<li><a href="https://npx1604768.aretta.net/npxuser/">
+							<img src="http://www.148apps.com/images/itms/309/309329914/icon175x175.png" class="ui-li-has-thumb"/>Access your voicemail
+					
+				
+		            			<li><a href="https://www.openair.com/index.pl">
+									<img src="http://www.maidoflondon.co.uk/asset/images/time_sheet.png" class="ui-li-has-thumb"/>Submit your timesheet
+									<li><a href="https://join.me/">
+										<img src="http://cdn1.iconfinder.com/data/icons/IconsLandVistaPeopleIconsDemo/256/Group_Meeting_Light.png" class="ui-li-has-thumb"/>Schedule a Web Meeting	
+										<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/directory">
+											<img src="http://en.wikimediation.org/images/4/4c/Directory-icon.jpg" class="ui-li-has-thumb"/>Company Directory
+											<li><a href="https://prod.beeline.com/northerntrust/Security/Login.aspx?Url=%2fnortherntrust">
+												<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSTWgGF8vKFulAhAbZ2Wbq3C0GOXL7QfD9tLcohqY1Gwo8zqPPLEw" class="ui-li-has-thumb"/>Beeline Time Entry	
+												<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/home/smart-office">
+													<img src="http://fc02.deviantart.net/fs51/f/2009/321/c/c/Office_2010_Icon_by_Andruli.png" class="ui-li-has-thumb"/>Smart Office			
+																 
+			</div>
+
+</div>
+<div data-role="footer"><div style="text-align: center;">
+	<p>Solstice-Mobile ©</p>
+	</div></div>
+</div>
+
+<!-- QUICK LINKS PAGE ENDS-->
+
+
+<!-- LATEST BLOG PAGE STARTS-->
+
+<div data-role="page" id="blog" data-title ="blog">
+	<div data-role="header"> 
+		<a data-role="button" data-rel="back" data-icon="arrow-l" data-corners="false">Back</a>
+		<a data-role="button" href="#main" data-icon="home" data-corners="false" data-transition="flip">Home</a>
+
+		<h1>Quick Links</h1>
+	</div>
+		<div data-role="content">
+		
+</div>
+</div>
+
+<!-- LATEST BLOG PAGE ENDS-->
+
+<!-- HR PAGE STARTS-->
+
+<div data-role="page" id="hr" data-title ="Human Resources">
+	<div data-role="header"> 
+		<a data-role="button" data-rel="back" data-icon="arrow-l" data-corners="false">Back</a>
+		<a data-role="button" href="#main" data-icon="home" data-corners="false" data-transition="flip">Home</a>
+        
+		<h1>Human Resources</h1>
+	</div>
+		<div data-role="content">
+			<div data-role="collapsible-set"  data-inset="true"><ul data-role="listview">	
+
+							<div data-role="collapsible" data-iconpos="right" data-expanded-icon="arrow-d">
+								<h2>Holidays List & View My PayCheck</h2>
+								<ul data-role="listview" data-theme="a">
+									
+										<li><a href="#holidays">Company Holidays</a>
+											<li><a href="https://viewmypaycheck.intuit.com/">View My PayCheck</a>
+							</div>
+							
+								
+
+											<div data-role="collapsible" data-iconpos="right" data-expanded-icon="arrow-d">
+												<h2>On Boarding</h2>
+												<ul data-role="listview" data-theme="a">
+
+														<li><a href="https://docs.google.com/a/solstice-consulting.com/spreadsheet/ccc?key=0AsodJGW0O7GBdFpCa3YwaHpHUUF4bHlrM3NlcUk4cUE&hl=en_US#gid=8">On-Boarding Process</a>
+															<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/home/day-one">Day One</a>
+											</div>
+											
+											<div data-role="collapsible" data-iconpos="right" data-expanded-icon="arrow-d">
+												<h2>Mentorship Program</h2>
+												<ul data-role="listview" data-theme="a">
+
+														<li><a href="https://sites.google.com/a/solstice-consulting.com/career-dialogue/home">Career Mentoring</a>
+															<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/home/j-s-internal-blog/stopmentortime">Solstice Career Path</a>
+																<li><a href="https://sites.google.com/a/solstice-consulting.com/career-dialogue/mentor-resources">Mentor/Mentee Resources</a>
+																
+											</div>
+											
+											<div data-role="collapsible" data-iconpos="right" data-expanded-icon="arrow-d">
+												<h2>Training</h2>
+												<ul data-role="listview" data-theme="a">
+
+														<li><a href="https://sites.google.com/a/solstice-consulting.com/solstice-employee-handbook/policies/training-and-productivity-budget-policy">Training and Productivity Budget Policy</a>
+															<li><a href="https://spreadsheets.google.com/a/solstice-consulting.com/spreadsheet/viewform?hl=en_US&formkey=dHRmWDVIRWdmVFVUbGRTZlpXdkIwRXc6MQ#gid=0">Training Request Form</a>
+																<li><a href="https://docs.google.com/a/solstice-consulting.com/spreadsheet/ccc?key=0AnZuzDeH7qiKdGpjcEl1ODVNUUFTdy1IQnVUNDR2Wnc#gid=0">Training Feedback Document</a>
+																	<li><a href="https://docs.google.com/a/solstice-consulting.com/document/d/19VZF980mZvCTsUZJaKEmg1QoXUUJLNM6Nu2mqrK2nKc/edit">Manual for Tracking/Submitting Monthly Training Expenses</a>
+																		<li><a href="http://lanyrd.com/topics/mobile/">Mobile Conference Navigator</a>
+											</div>
+
+
+											<div data-role="collapsible" data-iconpos="right" data-expanded-icon="arrow-d">
+												<h2>Teach Back Presentations From Trainings</h2>
+												<ul data-role="listview" data-theme="a">
+
+														<li><a href="https://docs.google.com/a/solstice-consulting.com/presentation/d/1pZEu38W7MvVOwNj1xXehsnMrGMzE6elfohbfoX8s2Sg/edit">Mobile First Look </a>
+															<li><a href="https://docs.google.com/a/solstice-consulting.com/presentation/d/16OGIKmJiKFJvzYl9gX9DnoT5CSJX_nAGGGu0eHFBpZk/edit">AppsWorld North America</a>
+																<li><a href="https://docs.google.com/a/solstice-consulting.com/file/d/0B1gHIEoocoYAMTJ4bGlDMEVDcWc/edit">SXSW </a>
+																	<li><a href="https://docs.google.com/a/solstice-consulting.com/presentation/d/1drncvJKyKfrdPHELSgj8Oa5rHWfReCiymuUydJsfA_k/edit#slide=id.p50/">Google I/O 2013</a>
+											</div>
+								
+								
+											<div data-role="collapsible" data-iconpos="right" data-expanded-icon="arrow-d">
+												<h2>Company Benefits</h2>
+												<ul data-role="listview" data-theme="a">
+
+					<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/cta-fare-progra">CTA Fare Program</a>
+					<li><a href="https://sites.google.com/a/solstice-consulting.com/solstice-employee-handbook/metra-benefits-fare-program">Metra Fare Program</a>
+					<li><a href="https://sites.google.com/a/solstice-consulting.com/solstice-employee-handbook/healthcare-plan">Healthcare program</a>
+					<li><a href="https://sites.google.com/a/solstice-consulting.com/solstice-employee-handbook/dental-plan">Dental and Vision Plan</a>
+						<li><a href="https://sites.google.com/a/solstice-consulting.com/solstice-employee-handbook/retirement-account">401(k) Plan</a>
+					<li><a href="https://sites.google.com/a/solstice-consulting.com/solstice-employee-handbook/life-insurance">Life insurance</a>
+						<li><a href="https://sites.google.com/a/solstice-consulting.com/solstice-employee-handbook/life-insurance">Long Term Disability</a>
+					<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/home/citibank-services">Citibank Private Bank Services </a>
+						<li><a href="https://docs.google.com/a/solstice-consulting.com/forms/d/1K00Vh54-0LtO3l-UpCkz5T0UJSuxUghOPLeMiePo6bw/viewform?edit_requested=true">Referral Program Form</a>
+					<li><a href="https://docs.google.com/a/solstice-consulting.com/presentation/d/1wrWC9ro7U0HBGu3IzTT8SFyhsQOdgpvfWndeGz4uGwY/edit#slide=id.p50">Solstice Equity Program Overview</a>	
+											</div>
+								
+											<div data-role="collapsible" data-iconpos="right" data-expanded-icon="arrow-d">
+												<h2>PTO/Time Off</h2>
+												<ul data-role="listview" data-theme="a">
+
+														<li><a href="https://sites.google.com/a/solstice-consulting.com/solstice-employee-handbook/policies/vacation/new-paid-time-off-policy">PTO Policy - Updated</a>
+															
+																
+																
+															<li><a href="https://docs.google.com/a/solstice-consulting.com/document/d/19w4ufSqd4iH2SdwQLZw_IkSjBgoUEaNoQgUJAdxVMSQ/edit">Instructions for Requesting Time Off </a>
+																<li><a href="https://www.openair.com/index.pl">Go to Open Air</a>
+											</div>
+								
+											<li><a href="#holidays">Observed Company Holidays</a>
+											
+											<li><div data-role="collapsible">
+									<h2>Solstice Hours of Operation</h2>
+										<div style="text-align: center;"><p>8:30am - 5:00pm ||
+										Monday - Friday
+										</p> </div>
+														
+														
+													
+	</div>	  	
+</div>
+</div>
+<div data-role="footer"><div style="text-align: center;">
+	<p>Solstice-Mobile ©</p>
+	</div></div>
+</div>
+
+<!-- HR PAGE ENDS-->
+
+<!-- RECRUITING PAGE STARTS-->
+
+<div data-role="page" id="recruit" data-title ="Recruiting">
+	<div data-role="header"> 
+		<a data-role="button" data-rel="back" data-icon="arrow-l" data-corners="false">Back</a>
+		<a data-role="button" href="#main" data-icon="home" data-corners="false" data-transition="flip">Home</a>
+		
+        
+		<h1>Recruiting</h1>
+	</div>
+	
+		<div data-role="content"><ul data-role="listview">
+		<li><a href= "http://54.225.120.85/CATS/" data-role="button” data-shadow="false” data-corners="true">CATs</a>
+			<li><a href= "#" data-role="button” data-shadow="false” data-corners="true">Submit a New Job Order</a>
+				<li><a href= "https://docs.google.com/a/solstice-consulting.com/spreadsheet/ccc?key=0AgLu6E9T8e0ndGN1bm5RZXFWdFRNWlNNMW5haXVVOVE&hl=en#gid=0" data-role="button” data-shadow="false” data-corners="true">Job Order Prioritization Tool</a>
+					<li><a href= "https://docs.google.com/a/solstice-consulting.com/spreadsheet/ccc?key=0AgLu6E9T8e0ndERlMlJLTlk3X3NiWVhHaUR5Y1NlWnc&hl=en#gid=0" data-role="button” data-shadow="false” data-corners="true">How to Qualify New Position</a>
+						<li><a href= "https://sites.google.com/a/solstice-consulting.com/onboarding/" data-role="button” data-shadow="false” data-corners="true">Contractor New Hire Site</a>
+							<li><a href= "https://docs.google.com/a/solstice-consulting.com/spreadsheet/ccc?key=0AgLu6E9T8e0ndHIwLXY3MXJKVVV5YWh5TTI3QlFNdHc&hl=en#gid=0" data-role="button” data-shadow="false” data-corners="true">Profit Margin Calculator</a>
+								<li><a href= "https://docs.google.com/a/solstice-consulting.com/document/d/15_dbHqfVLeRFgR-yVj15Ann6lUTNx7m51nuK2ir7mtw/edit?hl=en_US#" data-role="button” data-shadow="false” data-corners="true">Northern Trust Beeline Req release to Solstice </a>
+									<li><a href= "https://docs.google.com/a/solstice-consulting.com/spreadsheet/ccc?key=0AhrASevMf4mmdGh0RjhWcUVmekJTelE0QzFmMmdmS2c&hl=en_US#gid=8" data-role="button” data-shadow="false” data-corners="true">Starts & Ends Report</a>
+										
+</div>
+<div data-role="footer"><div style="text-align: center;">
+	<p>Solstice-Mobile ©</p>
+	</div></div>
+</div>
+
+<!-- RECRUITING PAGE ENDS-->
+
+<!-- MARKETING PAGE STARTS-->
+
+<div data-role="page" id="marketing" data-title ="Marketing">
+	<div data-role="header"> 
+		<a data-role="button" data-rel="back" data-icon="arrow-l" data-corners="false">Back</a>
+		<a data-role="button" href="#main" data-icon="home" data-corners="false" data-transition="flip">Home</a>
+		
+        
+		<h1>Marketing</h1>
+	</div>
+	
+		<div data-role="content"><ul data-role="listview">
+		<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/marketing/marketing-request-form">Marketing Request Form</a>
+		<li><a href="https://crm.solstice-consulting.com/crm/">SugarCRM</a>
+			<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/marketing/sugar-basis">SugarCRM FAQs </a>
+				<li><a hfref="https://sites.google.com/a/solstice-consulting.com/solstice-marketing/home/social-media-1">Solstice Social Media Accounts</a>
+					<li><a href="https://docs.google.com/a/solstice-consulting.com/presentation/d/1hfl-4yV_2fVMnI_cCFhfS7RiUEaueCjCANkiq8pjuIA/edit#slide=id.p50">Building Your Personal Brand </a>
+						<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/marketing/blogging-schedule">When's my blog due?</a>
+							<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/marketing/blog-setup">Blogging help</a>
+								<li><a href="http://solsticeconsulting.dyndns-work.com/crm/index.php?module=Campaigns&action=index">Marketing Campaign Tracking</a>
+									<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/marketing/branding-and-templates">Solstice Branding and Templates</a>
+																	
+</div>
+<div data-role="footer"><div style="text-align: center;">
+	<p>Solstice-Mobile ©</p>
+	</div></div>
+</div>
+
+<!-- MARKETING PAGE ENDS-->
+
+
+<!-- SALES PAGE STARTS-->
+
+<div data-role="page" id="sales" data-title ="sales">
+	<div data-role="header"> 
+		<a data-role="button" data-rel="back" data-icon="arrow-l" data-corners="false">Back</a>
+		<a data-role="button" href="#main" data-icon="home" data-corners="false" data-transition="flip">Home</a>
+		
+        
+		<h1>Sales</h1>
+	</div>
+	
+		<div data-role="content"><ul data-role="listview">
+		<li><a href="https://solsticemobile.sugarondemand.com/index.php?action=Login&module=Users&login_module=Home&login_action=index">SugarCRM</a>
+		<li><a href="https://sites.google.com/a/solstice-consulting.com/solstice-marketing/case-studies">Case Studies</a>
+			<li><a href="#">SOW CR Form </a>
+				<li><a hfref="https://docs.google.com/a/solstice-consulting.com/document/d/1EBRgS3pNBVEYQ73a-g6VdSQp4VqZM4byzbfgXVlmNKI/edit">SOW Template</a>
+					<li><a href="https://docs.google.com/a/solstice-consulting.com/presentation/d/13qH0BdujhTdcl4H7OOoW4ecOux6pklob-qzs_Ar2gEY/edit">Presentation Template</a>
+					
+																	
+</div>
+<div data-role="footer"><div style="text-align: center;">
+	<p>Solstice-Mobile ©</p>
+	</div></div>
+</div>
+
+<!-- SALES PAGE ENDS-->
+
+
+
+<!-- HOLIDAYS PAGE STARTS-->
+
+<div data-role="page" id="holidays" data-title ="Company Holidays">
+	<div data-role="header"> 
+		<a data-role="button" data-rel="back" data-icon="arrow-l" data-corners="false">Back</a>
+		<a data-role="button" href="#main" data-icon="home" data-corners="false" data-transition="flip">Home</a>
+		
+        
+		<h1>Human Resources</h1>
+	</div>
+		<div data-role="content">
+			
+			<div style="text-align: center;"><img src="http://developintegratedeploy.net/wp-content/uploads/2013/05/solsticeMobileBlack.png" alt="portfolio item 1" width="270" height="160" /></div>
+
+		                <p>If you are a full-time, salaried employee, you are guaranteed paid holidays, given that the holiday falls on a regularly scheduled workday. </p> 
+							Solstice Consulting, LLC generally follows the following holiday schedule:
+<br><br>
+							<table >
+								<tr >
+								   > New Year’s Day - Tue 1/1/2013 <br>
+								   > Memorial Day - Mon 5/27/2013<br>
+								   > Independence Day - Thu 7/4/2013 <br>
+								   > Labor Day - Mon 9/2/2013<br>
+								   > Thanksgiving Day - Thur 11/28/2013<br>
+								   > Christmas Day - Wed 12/25/2013
+								</tr>
+								
+							</table>
+							<h3>Floating Holidays</h3>
+
+							You will not be compensated for personal days or floating holidays if you leave the company.
+						</p>
+</div>
+<div data-role="footer"><div style="text-align: center;">
+	<p>Solstice-Mobile ©</p>
+	</div></div>
+</div>
+
+<!-- HOLIDAYS PAGE ENDS-->
+
+		
+<!-- NEED SOMETHING PAGE STARTS-->
+
+<div data-role="page" id="need" data-title="need">
+            <div data-role="header">
+         		<a data-role="button" data-rel="back" data-icon="arrow-l" data-corners="false">Back</a>
+				<a data-role="button" href="#main" data-icon="home" data-corners="false" data-transition="flip">Home</a>
+                <h1>Need Something</h1>
+
+            </div>
+         <div data-role="content"><ul data-role="listview">
+
+                    <!-- profile image -->
+                   <div style="text-align: center;"> <img src="http://www.etheco.ca/images/url-1.png" alt="mee" width="90" height="80"/></div>
+
+      				
+					<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/it-dept/solstice-it-support-form">Solstice IT Support Form </a>
+						<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/productivity-technology-request">Equipment/Software Request</a>
+							<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/it-dept/testing-device-request-form">Testing Device Request Form</a>
+								<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/benefitshelp">Benefits Help/Change Request</a>
+									<li><a href="https://spreadsheets.google.com/a/solstice-consulting.com/spreadsheet/viewform?hl=en_US&formkey=dHRmWDVIRWdmVFVUbGRTZlpXdkIwRXc6MQ#gid=0">Training Request</a>
+										<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/hr/update-personal-information">Update Personal Information</a>
+											<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/home/applauncher">AppLauncher</a>
+					</ul>
+       	     
+
+           </div>
+		<div data-role="footer"><div style="text-align: center;">
+			<p>Solstice-Mobile ©</p>
+			</div></div>
+</div>
+		
+		
+<!-- NEED SOMETHING PAGE ENDS-->
+
+
+<!-- GENERAL INFO PAGE STARTS-->
+		
+<div data-role="page" id="infor" >
+	<div data-role="header"> 
+		<a data-role="button" data-rel="back" data-icon="arrow-l" data-corners="false">Back</a>
+		<a data-role="button" href="#main" data-icon="home" data-corners="false" data-transition="flip">Home</a>
+		<h1>General Info</h1>
+	</div>
+		<div data-role="content">
+		  	<div data-role="controlgroup">
+			      <a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/directory" data-theme="e" data-role="button">Company Directory</a>
+			      <a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/home/developer-portal" data-role="button">Developer Portal</a>
+			      <a href="#hr" data-theme="a" data-role="button">Human Resources</a>
+					<a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/marketing"  data-role="button">Marketing Department</a>
+			      <a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/ops" data-theme="b" data-role="button">Operations Department</a>
+			      <a href="#recruit" data-role="button">Recruiting Department</a>
+					<a href="#sales" data-theme="e" data-role="button">Sales Department</a>
+			      <a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/ux-dept" data-role="button">User Experience Department</a>
+			      <a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/it-dept" data-theme="a" data-role="button">IT Department</a>
+				 <a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/memberships-associations" data-role="button">Memberships & Associations</a>
+					<a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/how-to-use-this-site" data-theme="e" data-role="button">Editing This Site</a>
+			      <a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/home/vacation-calendar" data-role="button">Vacation Calendar</a>
+			      <a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/system/app/pages/sitemap/hierarchy" data-theme="b" data-role="button">Sitemap</a>
+			    </div>
+		
+		
+		
+		</div>
+		<div data-role="footer"><div style="text-align: center;">
+			<p>Solstice-Mobile ©</p>
+			</div></div>
+		    
+</div> 
+<!-- GENERAL INFO PAGE ENDS-->
+
+
+
+<!-- OPERATIONS PAGE STARTS-->
+		
+<div data-role="page" id="help" data-transistion="flip">
+	<div data-role="header"> 
+		<a data-role="button" data-rel="back" data-icon="arrow-l" data-corners="false">Back</a>
+		<a data-role="button" href="#main" data-icon="home" data-corners="false" data-transition="flip">Home</a>
+		<h1>Operations</h1>
+	</div>
+		<div data-role="content">
+		  	<div data-role="controlgroup">
+			
+			<a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/client-contract-process" data-theme="a" data-role="button">Submit/Track a client contract</a>
+			<a href="https://docs.google.com/a/solstice-consulting.com/spreadsheet/ccc?key=0AgLu6E9T8e0ndENVTFpVeGdGSFFreW81V3FxTGFzMmc&hl=en_US#gid=1" data-theme="a" data-role="button">Client Contract Tracking spreadsheet </a>
+			<a href="https://prod.beeline.com/northerntrust/Security/Login.aspx?Url=%2fnortherntrust" data-theme="a" data-role="button">Beeline Time Entry</a>
+			<a href="https://solsticeconsulting.springahead.com/go/Account/Logon/login/?" data-theme="a" data-role="button">Time Reporting System(VTE)</a>
+			<a href="https://docs.google.com/a/solstice-consulting.com/spreadsheet/ccc?key=0AtWYk7K9im5DcEZuRzBrM1R0eHAtUGlFcHlWMmZxSnc&hl=en#gid=0" data-theme="a" data-role="button">Expense Report form</a>
+			<a href="#" data-theme="a" data-role="button">DM Allocation Sheet</a>
+			<a href="https://docs.google.com/a/solstice-consulting.com/spreadsheet/ccc?key=0AtAHb9-Z1VvNdHBmLTlDd3A0YkV5ZDFNR3NPMFY4MHc&hl=en_US#gid=0" data-theme="a" data-role="button">Resource Allocation Sheet</a>
+			<a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/solstice-equipment-policy" data-theme="a" data-role="button">Equipment Policy</a>
+			<a href="https://docs.google.com/a/solstice-consulting.com/document/d/1VQGuiwHIt6yvlSvQQ0zJmu1vupj8nevhmcflAOQYkks/edit" data-theme="a" data-role="button">Open/Lock Office Procedures </a>
+			<a href="https://docs.google.com/a/solstice-consulting.com/document/d/1vaWqbfVjYVcegN3FOLQdthRhn_T2FD7Y9AQcrqOCiKI/edit" data-theme="a" data-role="button">Credit Card & Expense Policy</a>
+			
+			</div>
+		</div>
+		<div data-role="footer"><div style="text-align: center;">
+			<p>Solstice-Mobile ©</p>
+			</div></div>
+		    
+</div> 
+<!-- HELP PAGE ENDS-->
+
+
+
+<!-- TRAINING HOME PAGE STARTS-->
+
+<div data-role="page" id="training">
+	<div data-role="header"> 
+		<a data-role="button" data-rel="back" data-icon="arrow-l" data-corners="false">Back</a>
+		<a data-role="button" href="#main" data-icon="home" data-corners="false" data-transition="flip">Home</a>
+        
+		<h1>Training</h1>
+	</div>
+		<div data-role="content">
+		  	<div style="text-align: center;"><img src="http://developintegratedeploy.net/wp-content/uploads/2013/05/solsticeMobileBlack.png" alt="portfolio item 1" width="270" height="160" /></div>
+
+		                <p>Welcome to Solstice's mobile training portal.  Some general modules are listed on this page and more specific modules are listed under the pages on the left.  You have access to edit this page so feel free to add modules you think would be relevant to any page.
+
+						New to the company?  
+						    Watch J Schwan define our vision of "Mobile First"
+						    Watch J's interview on the "Future of Mobility"
+
+						Also, Solstice Equinox  is a great way to ask questions and share knowledge and research about point-in-time relevant mobile topics!
+    &nbsp
+						Happy learning!
+						</p>
+						
+						<a href="#traininglist" input type="button">Enter</a>
+
+</div>
+<div data-role="footer"><div style="text-align: center;">
+	<p>Solstice-Mobile ©</p>
+	</div></div>
+</div>
+
+<!-- TRAINING HOME PAGE ENDS-->
+
+
+<!-- TRAINING LIST PAGE STARTS-->
+
+<div data-role="page" id="traininglist">
+<div data-role="header"> 
+	<a data-role="button" data-rel="back" data-icon="arrow-l" data-corners="false">Back</a>
+	<a data-role="button" href="#main" data-icon="home" data-corners="false" data-transition="flip">Home</a>
+	<h1>Training Home</h1>
+	
+</div>
+<div data-role="content"> 
+	
+	<div data-role="collapsible-set"  data-inset="true"><ul data-role="listview">	
+	
+					<div data-role="collapsible">
+						<h2>Select your platform</h2>
+						<ul data-role="listview" data-theme="b">
+							<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/general-developer/android">Android Training Portal </a>
+								<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/general-developer/flex">Flex Training Portal</a>
+									<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/general-developer/html5">HTML5 </a>
+										<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/general-developer/ios">iOS Training Portal </a>
+						</ul>
+					</div>
+					
+					<div data-role="collapsible">
+						<h2>ScrumMaster and Agile Training</h2>
+						<ul data-role="listview" data-theme="b">
+							<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/scrummaster-and-agile-training/agile-whitepapers-etc">Agile Whitepapers, Blogs, etc.</a>
+								<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/scrummaster-and-agile-training/rally-software-help-2">Rally Software Help</a>
+									<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/scrummaster-and-agile-training/scrum-master-resources">Scrum Master Resources</a>
+										<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/scrummaster-and-agile-training/solstice-agile-curriculum">Solstice Agile Curriculum</a>
+						</ul>
+					</div>	
+					
+					
+						<div data-role="collapsible">
+							<h2>Security</h2>
+							<ul data-role="listview" data-theme="b">
+								<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/security/oracle">Oracle</a>
+									<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/security/pingidentity">Ping Identity</a>
+										<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/security/symplified">Symplified</a>
+											
+							</ul>
+						</div>	
+
+<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/delivery-frameworks">Delivery Frameworks</a>
+	<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/dmem">DM/EM Training</a>
+		<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/business-analyst-training">Mobile Business Analyst Training</a>
+			<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/mobile-enterprise-architecture-1">Mobile Enterprise Architecture Training</a>
+				<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/mobile-ux-topics">Mobile UX Topics</a>
+					<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/core-training-modules">Monthly Core Training Modules</a>
+						<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/program-management">Program Management</a>
+							<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/qa-tools-and-training">QA Tools and Training</a>
+								<li><a href="https://sites.google.com/a/solstice-consulting.com/solsticeportal/mobiletraining/vendor-documentation">Vendor Documentation</a>
+								
+								
+		                   
+		                        					
+								
+</div>
+</div>
+<div data-role="footer"><div style="text-align: center;">
+	<p>Solstice-Mobile ©</p>
+	</div></div>	
+</div>
+	<!-- TRAINING LIST PAGE ENDS-->
+	
+	<!-- PROJECTS PORTAL PAGE STARTS-->
+	
+	
+	<div data-role="page" id="projects" data-title="projects">
+	            <div data-role="header">
+	                <h1>Projects Portal</h1>
+	               	<a data-role="button" data-rel="back" data-icon="arrow-l" data-corners="false">Back</a>
+					<a data-role="button" href="#main" data-icon="home" data-corners="false" data-transition="flip">Home</a>
+	            </div>
+	            <div data-role="content"> <ul data-role="listview">	
+
+	            	<div class="pt-menu">
+				            <a data-theme="d" data-corners="false" data-role="button" href="https://sites.google.com/a/solstice-consulting.com/current-mobile-projects/">
+				                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTW1Ur94lsqiL-vDScqd1_Te1SfWZYcw1BkNFuZxIdKnVUHroLS" width="80" height="80" alt="rss" style="display: block; margin: 0 auto">
+				                Current Projects
+				            </a>
+							   <a data-theme="d" data-corners="false" data-role="button" href="https://rally1.rallydev.com/slm/login.op">
+					                <img src="http://www.jamasoftware.com/wp-content/uploads/images/logos/rally_logo.png" width="80" height="80" alt="rss" style="display: block; margin: 0 auto">
+					               Rally
+					            </a>
+								<a data-theme="d" data-corners="false" data-role="button" href="https://prod.help.rallydev.com/?basehost=https://rally1.rallydev.com">
+						                
+						             Rally Help
+					                
+						            </a>
+								   <a data-theme="d" data-corners="false" data-role="button" href="https://sites.google.com/a/solstice-consulting.com/mobile-project-template/">
+						                <img src="http://www.headcorn.org/assets/images/mobi.png" width="80" height="80" alt="rss" style="display: block; margin: 0 auto">
+						                Mobile Project Template
+						            </a>
+									   <a data-theme="d" data-corners="false" data-role="button" href="https://docs.google.com/a/solstice-consulting.com/document/d/1ocOly6uWYCzMeprPNuEB53xDmku2tcmsft4-67GNgkQ/edit?hl=en_US">
+							                
+							               Mobile Project Template Help
+						                
+							            </a>
+										<a href="mailto:thiltrop@solstice-mobile.com" data-theme="d" data-corners="false" data-role="button" >
+
+								             Email Travis
+
+								            </a>
+	
+	</div>
+	<div data-role="footer"><div style="text-align: center;">
+		<p>Solstice-Mobile ©</p>
+		</div></div>
+	</div>
+
+	
+<!-- PROJECTS PORTAL PAGE ENDS-->
+	
+
+
+
+
+
+
+
+
+<!-- MAIN PAGE ENDS-->
+	
+	
+</div>
+</body> 
+</html>
